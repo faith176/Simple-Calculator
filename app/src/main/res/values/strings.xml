@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="btn01">1</string>
+    <string name="btn02">2</string>
+    <string name="btn03">3</string>
+    <string name="btnPlus">+</string>
+    <string name="btn04">4</string>
+    <string name="btn05">5</string>
+    <string name="btn06">6</string>
+    <string name="btnMinus">-</string>
+    <string name="btn07">7</string>
+    <string name="btn08">8</string>
+    <string name="btn09">9</string>
+    <string name="btnDivide">/</string>
+    <string name="btnClear">C</string>
+    <string name="btn00">0</string>
+    <string name="btnDot">.</string>
+    <string name="btnMultiply">*</string>
+    <string name="btnResult">=</string>
+</resources>
