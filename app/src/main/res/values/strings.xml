@@ -17,4 +17,6 @@
     <string name="btnDot">.</string>
     <string name="btnMultiply">*</string>
     <string name="btnResult">=</string>
+    <string name="equationPrev">Equation Will Appear Here</string>
+
 </resources>
