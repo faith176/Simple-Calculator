@@ -10,8 +10,10 @@ public class MainActivity extends Activity {
 
     private double data1 = 0;
     private String current="";
+    private String currentInt;
     private double result=0;
     private String operation="";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,54 +21,45 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-    public void btn00Click(View view) {
+    public void numericButtonClicked(View view) {
         EditText eText = findViewById(R.id.resultText);
-        eText.setText(eText.getText() + "0");
-    }
-
-    public void btn01Click(View view) {
-        EditText eText = findViewById(R.id.resultText);
-        eText.setText(eText.getText() + "1");
-    }
-
-    public void btn02Click(View view) {
-        EditText eText = findViewById(R.id.resultText);
-        eText.setText(eText.getText() + "2");
-    }
-
-    public void btn03Click(View view) {
-        EditText eText = findViewById(R.id.resultText);
-        eText.setText(eText.getText() + "3");
-    }
-
-    public void btn04Click(View view) {
-        EditText eText = findViewById(R.id.resultText);
-        eText.setText(eText.getText() + "4");
-    }
-
-    public void btn05Click(View view) {
-        EditText eText = findViewById(R.id.resultText);
-        eText.setText(eText.getText() + "5");
-    }
-
-    public void btn06Click(View view) {
-        EditText eText = findViewById(R.id.resultText);
-        eText.setText(eText.getText() + "6");
-    }
-
-    public void btn07Click(View view) {
-        EditText eText = findViewById(R.id.resultText);
-        eText.setText(eText.getText() + "7");
-    }
-
-    public void btn08Click(View view) {
-        EditText eText = findViewById(R.id.resultText);
-        eText.setText(eText.getText() + "8");
-    }
-
-    public void btn09Click(View view) {
-        EditText eText = findViewById(R.id.resultText);
-        eText.setText(eText.getText() + "9");
+        int numID = view.getId();
+        switch (numID){
+            case(R.id.btn00):
+                currentInt= (eText.getText()+"0");
+                break;
+            case(R.id.btn01):
+                currentInt= (eText.getText()+"1");
+                break;
+            case(R.id.btn02):
+                currentInt= (eText.getText()+"2");
+                break;
+            case(R.id.btn03):
+                currentInt= (eText.getText()+"3");
+                break;
+            case(R.id.btn04):
+                currentInt= (eText.getText()+"4");
+                break;
+            case(R.id.btn05):
+                currentInt= (eText.getText()+"5");
+                break;
+            case(R.id.btn06):
+                currentInt= (eText.getText()+"6");
+                break;
+            case(R.id.btn07):
+                currentInt= (eText.getText()+"7");
+                break;
+            case(R.id.btn08):
+                currentInt= (eText.getText()+"8");
+                break;
+            case(R.id.btn09):
+                currentInt= (eText.getText()+"9");
+                break;
+            case(R.id.btnDot):
+                currentInt= (eText.getText()+".");
+                break;
+        }
+        eText.setText(currentInt);
     }
 
     public void btnAddClick(View view) {
@@ -154,12 +147,6 @@ public class MainActivity extends Activity {
         eView.setText("");
         current="";
         result=0;
-    }
-
-    public void btnDotClick(View view) {
-        EditText eText = findViewById(R.id.resultText);
-        current= (eText.getText()+".");
-        eText.setText(current);
     }
 
     public void evaluate(String operation){
