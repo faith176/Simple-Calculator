@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-    private enum Operator {none, add, minus, multiply, divide}
     private double data1 = 0;
     private String current="";
     private double result=0;
