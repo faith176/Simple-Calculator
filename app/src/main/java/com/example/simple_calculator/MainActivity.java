@@ -1,6 +1,7 @@
 package com.example.simple_calculator;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -12,6 +13,8 @@ public class MainActivity extends Activity {
     private Operator optr = Operator.none;
     private String current="";
     private double result=0;
+    private String operation="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,10 +85,11 @@ public class MainActivity extends Activity {
             result= data1;
         }
         else{
+            evaluate(operation);
             current= (current + data1 + " + ");
             eView.setText(current);
-            result = (result + data1);
         }
+        operation = ("add");
     }
 
     public void btnMinusClick(View view) {
@@ -96,15 +100,15 @@ public class MainActivity extends Activity {
         eText.setText("");
         if (current.equals("")){
             current= (data1 + " - ");
-            eView.setText(data1 + " - ");
+            eView.setText(current);
             result= data1;
-
         }
         else{
+            evaluate(operation);
             current= (current + data1 + " - ");
             eView.setText(current);
-            result = (result - data1);
         }
+        operation = ("minus");
     }
 
     public void btnMultiplyClick(View view) {
@@ -117,14 +121,13 @@ public class MainActivity extends Activity {
             current=( data1 + " * ");
             eView.setText(current);
             result= data1;
-
-
         }
         else{
+            evaluate(operation);
             current= ("(" + current + data1 + ")" + " * ");
             eView.setText(current);
-            result = (result*data1);
         }
+        operation = ("multiply");
     }
 
     public void btnDivideClick(View view) {
@@ -134,15 +137,16 @@ public class MainActivity extends Activity {
         data1 = Double.parseDouble(eText.getText().toString());
         eText.setText("");
         if (current.equals("")){
-            current= (data1 + " / ");
-            eView.setText(data1 + " / ");
+            current= ("(" + data1 + " / " + ")" );
+            eView.setText(current);
             result= data1;
         }
         else{
+            evaluate(operation);
             current= ("(" + current + data1 + ")" +  " / ");
             eView.setText(current);
-            result = (result/data1);
         }
+        operation = ("divide");
     }
 
     public void btnClearClick(View view) {
@@ -156,33 +160,49 @@ public class MainActivity extends Activity {
 
     public void btnDotClick(View view) {
         EditText eText = findViewById(R.id.resultText);
-        eText.setText(eText.getText() + ".");
+        current= (eText.getText()+".");
+        eText.setText(current);
+    }
+
+    public void evaluate(String operation){
+        String e1 = String.valueOf(result);
+        String e2 = String.valueOf(data1);
+        String y = null;
+        switch(operation) {
+            case ("add"):
+                y = (e1 + " + " + e2);
+
+                result = result + data1;
+                break;
+            case ("minus"):
+                y = (e1 + " - " + e2);
+
+                result = result - data1;
+                break;
+            case ("multiply"):
+                y = (e1 + " * " + e2);
+
+                result = result * data1;
+                break;
+            case ("divide"):
+                y = (e1 + " / " + e2);
+                result = result / data1;
+                break;
+        }
+        String hold = String.valueOf(result);
+        Log.d("equation", y);
+        Log.d("result", hold);
     }
 
     public void btnResultsClick(View view) {
-        if (optr != Operator.none) {
-            EditText eText = findViewById(R.id.resultText);
-            data2 = Double.parseDouble(eText.getText().toString());
-            double res = 0;
-            switch (optr) {
-                case add:
-                    res = data1 + data2;
-                    break;
-                case minus:
-                    res = data1 - data2;
-                    break;
-                case multiply:
-                    res = data1 * data2;
-                    break;
-                case divide:
-                    res = data1 / data2;
-                    break;
-            }
-            optr = Operator.none;
-            data1 = res;
-//            if (res - (int)res != 0) eText.setText(String.valueOf(res));
-//            else eText.setText(String.valueOf((int)res));
-            eText.setText(String.valueOf((double)result));
+        TextView eView = findViewById(R.id.equationTextView);
+        EditText eText = findViewById(R.id.resultText);
+        data1 = Double.parseDouble(eText.getText().toString());
+
+        current= (current + data1);
+        eView.setText(current);
+
+        evaluate(operation);
+        eText.setText(String.valueOf(result));
         }
     }
-}
