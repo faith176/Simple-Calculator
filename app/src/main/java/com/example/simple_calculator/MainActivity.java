@@ -9,8 +9,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
     private enum Operator {none, add, minus, multiply, divide}
-    private double data1 = 0, data2 = 0;
-    private Operator optr = Operator.none;
+    private double data1 = 0;
     private String current="";
     private double result=0;
     private String operation="";
@@ -74,7 +73,7 @@ public class MainActivity extends Activity {
     public void btnAddClick(View view) {
         EditText eText = findViewById(R.id.resultText);
         TextView eView = findViewById(R.id.equationTextView);
-        optr = Operator.add;
+
         data1 = Double.parseDouble(eText.getText().toString());
         eText.setText("");
         //get current equation and add onto it
@@ -95,7 +94,7 @@ public class MainActivity extends Activity {
     public void btnMinusClick(View view) {
         EditText eText = findViewById(R.id.resultText);
         TextView eView = findViewById(R.id.equationTextView);
-        optr = Operator.minus;
+
         data1 = Double.parseDouble(eText.getText().toString());
         eText.setText("");
         if (current.equals("")){
@@ -114,7 +113,7 @@ public class MainActivity extends Activity {
     public void btnMultiplyClick(View view) {
         EditText eText = findViewById(R.id.resultText);
         TextView eView = findViewById(R.id.equationTextView);
-        optr = Operator.multiply;
+
         data1 = Double.parseDouble(eText.getText().toString());
         eText.setText("");
         if (current.equals("")){
@@ -133,7 +132,7 @@ public class MainActivity extends Activity {
     public void btnDivideClick(View view) {
         EditText eText = findViewById(R.id.resultText);
         TextView eView = findViewById(R.id.equationTextView);
-        optr = Operator.divide;
+
         data1 = Double.parseDouble(eText.getText().toString());
         eText.setText("");
         if (current.equals("")){
