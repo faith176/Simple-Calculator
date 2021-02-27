@@ -169,17 +169,14 @@ public class MainActivity extends Activity {
         switch(operation) {
             case ("add"):
                 y = (e1 + " + " + e2);
-
                 result = result + data1;
                 break;
             case ("minus"):
                 y = (e1 + " - " + e2);
-
                 result = result - data1;
                 break;
             case ("multiply"):
                 y = (e1 + " * " + e2);
-
                 result = result * data1;
                 break;
             case ("divide"):
