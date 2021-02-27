@@ -128,7 +128,7 @@ public class MainActivity extends Activity {
         data1 = Double.parseDouble(eText.getText().toString());
         eText.setText("");
         if (current.equals("")){
-            current= ("(" + data1 + " / " + ")" );
+            current= (data1 + " / ");
             eView.setText(current);
             result= data1;
         }
@@ -183,8 +183,7 @@ public class MainActivity extends Activity {
 
         current= (current + data1);
         eView.setText(current);
-
         evaluate(operation);
-        eText.setText(String.valueOf(result));
+        eText.setText("= " + result);
         }
     }

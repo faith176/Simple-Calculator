@@ -16,9 +16,9 @@
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:layout_gravity="center_vertical"
-            android:textSize="20sp"
             android:hint="@string/equationPrev"
-            android:textColor="@color/grey2" />
+            android:textColor="@color/grey2"
+            android:textSize="30sp" />
 
         <EditText
             android:id="@+id/resultText"
@@ -227,7 +227,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/buttonborder"
+            android:background="@drawable/redbuttonborder"
             android:onClick="btnResultsClick"
             android:text="@string/btnResult"
             android:textSize="25sp" />
