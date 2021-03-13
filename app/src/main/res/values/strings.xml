@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Simple Calculator</string>
+    <string name="equationPrev">Equation Will Appear Here</string>
     <string name="btn01">1</string>
     <string name="btn02">2</string>
     <string name="btn03">3</string>
@@ -17,6 +18,6 @@
     <string name="btnDot">.</string>
     <string name="btnMultiply">*</string>
     <string name="btnResult">=</string>
-    <string name="equationPrev">Equation Will Appear Here</string>
+    <string name="baseConverter">Convert Base</string>
 
 </resources>

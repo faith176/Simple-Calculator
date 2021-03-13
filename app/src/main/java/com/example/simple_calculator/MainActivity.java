@@ -1,4 +1,5 @@
 package com.example.simple_calculator;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -32,6 +33,13 @@ public class MainActivity extends Activity {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         int colorCodeDark = Color.parseColor("#63939c");
         window.setStatusBarColor(colorCodeDark);
+    }
+
+    //switches to BaseConverter
+    public void baseConvertClick(View view) {
+        Intent intent;
+        intent = new Intent(MainActivity.this, BaseConverter.class);
+        startActivity(intent);
     }
 
     public void numericButtonClicked(View view) {

@@ -19,6 +19,7 @@
             android:layout_gravity="center_vertical"
             android:hint="@string/equationPrev"
             android:textColor="@color/grey2"
+            android:background="#ffffff"
             android:textSize="30sp" />
 
         <EditText
@@ -26,6 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="119dp"
             android:ems="10"
+            android:background="#ffffff"
             android:inputType="textPersonName"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -249,6 +251,24 @@
             android:text="@string/btnResult"
             android:textColor="@color/white"
             android:textSize="35sp" />
+
+        <LinearLayout
+            android:id="@+id/row5"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/base_convert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/green1border"
+                android:onClick="baseConvertClick"
+                android:text="@string/baseConverter"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
 
     </LinearLayout>
 
