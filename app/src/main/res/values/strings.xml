@@ -34,4 +34,6 @@
     <string name="hexConversion">Hex Conversion</string>
     <string name="octalConversion">Octal Conversion</string>
 
+    <string name="calculator">Calculator</string>
+
 </resources>

@@ -175,6 +175,21 @@
                 android:hint="@string/octalConversion"
                 android:textSize="20dp"/>
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+            <Button
+                android:id="@+id/calculator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/green1border"
+                android:onClick="calculatorClick"
+                android:text="@string/calculator"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
         </LinearLayout>
 
 
