@@ -38,46 +38,92 @@
                 android:text="@string/inputBase"
                 android:textColor="@color/green1" />
 
-            <LinearLayout
-                android:id="@+id/chosen_base"
+
+            <RadioGroup
+                android:id="@+id/groupradio"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/decimal_base"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/green2"
-                    android:onClick="decimalClick"
-                    android:text="@string/decimal" />
+                    <RadioButton
+                        android:id="@+id/decimal_base"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/green2"
+                        android:buttonTint="@color/white"
+                        android:text="@string/decimal"
+                        android:textColor="@color/white"
+                        android:onClick="onRadioButtonClicked"/>
 
-                <Button
-                    android:id="@+id/binary_base"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/green2"
-                    android:text="@string/binary"/>
+                    <RadioButton
+                        android:id="@+id/binary_base"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/green2"
+                        android:buttonTint="@color/white"
+                        android:text="@string/binary"
+                        android:textColor="@color/white"
+                        android:onClick="onRadioButtonClicked"/>
 
-                <Button
-                    android:id="@+id/hex_base"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/green2"
-                    android:text="@string/hex" />
+                    <RadioButton
+                        android:id="@+id/hex_base"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/green2"
+                        android:buttonTint="@color/white"
+                        android:text="@string/hex"
+                        android:textColor="@color/white"
+                        android:onClick="onRadioButtonClicked"/>
 
-                <Button
-                    android:id="@+id/octal_base"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/green2"
-                    android:text="@string/octal" />
+                    <RadioButton
+                        android:id="@+id/octal_base"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/green2"
+                        android:buttonTint="@color/white"
+                        android:text="@string/octal"
+                        android:textColor="@color/white"
+                        android:onClick="onRadioButtonClicked"/>
 
-            </LinearLayout>
+            </RadioGroup>
+
+<!--                <Button-->
+<!--                    android:id="@+id/decimal_base"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:backgroundTint="@color/green2"-->
+<!--                    android:text="@string/decimal" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/binary_base"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:backgroundTint="@color/green2"-->
+<!--                    android:text="@string/binary"/>-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/hex_base"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:backgroundTint="@color/green2"-->
+<!--                    android:text="@string/hex" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/octal_base"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:backgroundTint="@color/green2"-->
+<!--                    android:text="@string/octal" />-->
+
+
 
             <EditText
                 android:id="@+id/input"
