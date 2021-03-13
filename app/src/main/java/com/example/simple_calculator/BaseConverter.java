@@ -11,13 +11,15 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.TextView;
 
 public class BaseConverter extends AppCompatActivity {
 
     private String currentBase = "";
+    private String input="";
+    private int output;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -59,10 +61,39 @@ public class BaseConverter extends AppCompatActivity {
         Log.d("check base", currentBase);
     }
 
+    public void calculateClick(View view) {
+        EditText input = findViewById(R.id.input);
+        String userInput = input.getText().toString();
+        TextView decimal_calc = findViewById(R.id.decimal_calc);
+        decimal_calc.setText(convertToDecimal(userInput));
+    }
+
     public void calculatorClick(View view) {
         Intent intent1;
         intent1 = new Intent(BaseConverter.this, MainActivity.class);
         startActivity(intent1);
+    }
+
+    public String convertToDecimal(String input){
+        // Check which radio button was clicked
+        switch(currentBase) {
+            case ("decimal"):
+                Log.d("new output", String.valueOf(output));
+                return String.valueOf(input);
+            case ("binary"):
+                output = Integer.parseInt(input,2);
+                Log.d("new output", String.valueOf(output));
+                return String.valueOf(output);
+            case ("hex"):
+                output = Integer.parseInt(input,16);
+                Log.d("new output", String.valueOf(output));
+                return String.valueOf(output);
+            case ("octal"):
+                output = Integer.parseInt(input,8);
+                Log.d("new output", String.valueOf(output));
+                return String.valueOf(output);
+        }
+        return input;
     }
 
 }
