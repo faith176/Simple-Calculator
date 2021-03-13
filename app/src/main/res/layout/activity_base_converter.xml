@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:text="@string/inputBase"
                 android:textColor="@color/green1" />
@@ -49,7 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/green1border"
+                    android:backgroundTint="@color/green2"
                     android:text="@string/decimal" />
 
                 <Button
@@ -57,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/green1border"
+                    android:backgroundTint="@color/green2"
                     android:text="@string/binary"/>
 
                 <Button
@@ -65,7 +65,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/green1border"
+                    android:backgroundTint="@color/green2"
                     android:text="@string/hex" />
 
                 <Button
@@ -73,7 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/green1border"
+                    android:backgroundTint="@color/green2"
                     android:text="@string/octal" />
 
             </LinearLayout>
@@ -96,9 +96,9 @@
                 <Button
                     android:id="@+id/calculate"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="58dp"
                     android:layout_weight="1"
-                    android:background="@drawable/green1border"
+                    android:backgroundTint="@color/green2"
                     android:text="@string/converterCalculate" />
 
             </LinearLayout>
@@ -184,7 +184,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/green1border"
+                android:backgroundTint="@color/green2"
                 android:onClick="calculatorClick"
                 android:text="@string/calculator"
                 android:textColor="@color/white"
