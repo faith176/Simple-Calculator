@@ -20,4 +20,13 @@
     <string name="btnResult">=</string>
     <string name="baseConverter">Convert Base</string>
 
+    <string name="baseConverterTitle">Base Converter</string>
+    <string name="inputBase">Select Base of Input</string>
+    <string name="converterInput">Enter a number in specified base</string>
+    <string name="converterCalculate">Calculate</string>
+    <string name="decimal">Decimal</string>
+    <string name="binary">Binary</string>
+    <string name="hex">Hex</string>
+    <string name="octal">Octal</string>
+
 </resources>
