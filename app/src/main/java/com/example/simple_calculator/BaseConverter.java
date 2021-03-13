@@ -10,8 +10,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 
 public class BaseConverter extends AppCompatActivity {
+
+    private String currentBase = "";
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -27,8 +30,10 @@ public class BaseConverter extends AppCompatActivity {
     }
 
     public void calculatorClick(View view) {
-        Intent intent;
-        intent = new Intent(BaseConverter.this, MainActivity.class);
-        startActivity(intent);
+        Intent intent1;
+        intent1 = new Intent(BaseConverter.this, MainActivity.class);
+        startActivity(intent1);
     }
+
+
 }
