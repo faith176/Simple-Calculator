@@ -90,7 +90,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="79dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -107,13 +107,73 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/decimal" />
+                android:text="@string/decimal"
+                android:textSize="20dp"
+                android:textColor="@color/green1"/>
 
             <TextView
                 android:id="@+id/decimal_calc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:hint="@string/decimalConvertion"
+                android:textSize="20dp"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/binary"
+                android:textSize="20dp"
+                android:textColor="@color/green1"/>
+
+            <TextView
+                android:id="@+id/binary_calc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/binaryConversion"
+                android:textSize="20dp"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hex"
+                android:textSize="20dp"
+                android:textColor="@color/green1"/>
+
+            <TextView
+                android:id="@+id/hex_calc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hexConversion"
+                android:textSize="20dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/octal"
+                android:textSize="20dp"
+                android:textColor="@color/green1"/>
+
+            <TextView
+                android:id="@+id/octal_calc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/octalConversion"
+                android:textSize="20dp"/>
 
         </LinearLayout>
 

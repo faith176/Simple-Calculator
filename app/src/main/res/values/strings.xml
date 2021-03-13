@@ -29,4 +29,9 @@
     <string name="hex">Hex</string>
     <string name="octal">Octal</string>
 
+    <string name="binaryConversion">Binary Conversion</string>
+    <string name="decimalConvertion">Decimal Conversion</string>
+    <string name="hexConversion">Hex Conversion</string>
+    <string name="octalConversion">Octal Conversion</string>
+
 </resources>
