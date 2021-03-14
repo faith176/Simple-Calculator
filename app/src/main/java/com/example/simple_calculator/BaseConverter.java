@@ -19,7 +19,7 @@ public class BaseConverter extends AppCompatActivity {
 
     private String currentBase = "";
     private String input="";
-    private int output;
+    private String output ="";
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -62,10 +62,24 @@ public class BaseConverter extends AppCompatActivity {
     }
 
     public void calculateClick(View view) {
+        //stores input from user
         EditText input = findViewById(R.id.input);
         String userInput = input.getText().toString();
+        //declare the textviews which will display the outputs
         TextView decimal_calc = findViewById(R.id.decimal_calc);
+        TextView binary_calc = findViewById(R.id.binary_calc);
+        TextView hex_calc = findViewById(R.id.hex_calc);
+        TextView octal_calc = findViewById(R.id.octal_calc);
+
+        //sets the outputs in their appropriate textboxes
         decimal_calc.setText(convertToDecimal(userInput));
+        binary_calc.setText(convertToBinary(userInput));
+        hex_calc.setText(convertToHex(userInput.toUpperCase()));
+        octal_calc.setText(convertToOctal(userInput));
+
+        getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN
+        );
     }
 
     public void calculatorClick(View view) {
@@ -75,23 +89,92 @@ public class BaseConverter extends AppCompatActivity {
     }
 
     public String convertToDecimal(String input){
-        // Check which radio button was clicked
+        // Check which radio button was clicked, the current base of the input
         switch(currentBase) {
             case ("decimal"):
-                Log.d("new output", String.valueOf(output));
-                return String.valueOf(input);
+                Log.d("new output", (input));
+                return (input);
             case ("binary"):
-                output = Integer.parseInt(input,2);
-                Log.d("new output", String.valueOf(output));
-                return String.valueOf(output);
+                output = String.valueOf(Integer.parseInt(input,2));
+                Log.d("new output", (output));
+                return (output);
             case ("hex"):
-                output = Integer.parseInt(input,16);
-                Log.d("new output", String.valueOf(output));
-                return String.valueOf(output);
+                output = String.valueOf(Integer.parseInt(input,16));
+                Log.d("new output", (output));
+                return (output);
             case ("octal"):
-                output = Integer.parseInt(input,8);
+                output = String.valueOf(Integer.parseInt(input,8));
+                Log.d("new output", (output));
+                return (output);
+        }
+        return input;
+    }
+
+
+    public String convertToBinary(String input){
+        // Check which radio button was clicked, the current base of the input
+        switch(currentBase) {
+            case ("decimal"):
+                output = Integer.toBinaryString(Integer.parseInt(input));
+                Log.d("new output", (output));
+                return (output);
+            case ("binary"):
+                Log.d("new output",(input));
+                return (input);
+            case ("hex"):
+                output = Integer.toBinaryString(Integer.parseInt(input, 16));
+                Log.d("new output", (output));
+                return (output);
+            case ("octal"):
+                output = Integer.toBinaryString(Integer.parseInt(input, 8));
+                Log.d("new output",(output));
+                return (output);
+        }
+        return input;
+    }
+
+
+    public String convertToHex(String input){
+        // Check which radio button was clicked, the current base of the input
+        switch(currentBase) {
+            case ("decimal"):
+                output = Integer.toHexString(Integer.parseInt(input));
+                Log.d("new output", (output));
+                return (output);
+            case ("binary"):
+                output = Integer.toHexString(Integer.parseInt(input, 2));
+                Log.d("new output", (output));
+                return (output);
+            case ("hex"):
+                Log.d("new output", (input));
+                return (input);
+            case ("octal"):
+                output = Integer.toHexString(Integer.parseInt(input, 8));
+                Log.d("new output",(output));
+                return (output);
+        }
+        return input;
+    }
+
+
+    public String convertToOctal(String input){
+        // Check which radio button was clicked, the current base of the input
+        switch(currentBase) {
+            case ("decimal"):
+                output = Integer.toOctalString(Integer.parseInt(input));
+                Log.d("new output", (output));
+                return (output);
+            case ("binary"):
+                output = Integer.toOctalString(Integer.parseInt(input, 2));
                 Log.d("new output", String.valueOf(output));
-                return String.valueOf(output);
+                return (output);
+            case ("hex"):
+                output = Integer.toOctalString(Integer.parseInt(input, 16));
+                Log.d("new output", (output));
+                return (output);
+            case ("octal"):
+                Log.d("new output",(input));
+                return (input);
         }
         return input;
     }

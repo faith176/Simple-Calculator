@@ -91,40 +91,6 @@
 
             </RadioGroup>
 
-<!--                <Button-->
-<!--                    android:id="@+id/decimal_base"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:backgroundTint="@color/green2"-->
-<!--                    android:text="@string/decimal" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/binary_base"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:backgroundTint="@color/green2"-->
-<!--                    android:text="@string/binary"/>-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/hex_base"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:backgroundTint="@color/green2"-->
-<!--                    android:text="@string/hex" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/octal_base"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:backgroundTint="@color/green2"-->
-<!--                    android:text="@string/octal" />-->
-
-
-
             <EditText
                 android:id="@+id/input"
                 android:layout_width="match_parent"
