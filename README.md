@@ -9,6 +9,6 @@ Currently adding a base converter
 - Calculator can take an expression as input and evaluate
 - Calculator keeps track of and displays the users's mathematical expression as they use the calculator and calculates the expression as it is being inputted
 - Plan to add more operations for it in the future, such as exponents, factorials, brackets, and a section dedicated to binary operations using 1's and 2's complement
-
-# Pictures of App
+ 
+# Pictures of App, calculator and base converter 
  ![Calculator](app/src/main/res/drawable-v24/calculator1.png)  ![Base Converter](app/src/main/res/drawable-v24/calculator2.png)
