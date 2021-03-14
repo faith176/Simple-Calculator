@@ -18,7 +18,6 @@ import android.widget.TextView;
 public class BaseConverter extends AppCompatActivity {
 
     private String currentBase = "";
-    private String input="";
     private String output ="";
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -74,7 +73,7 @@ public class BaseConverter extends AppCompatActivity {
         //sets the outputs in their appropriate textboxes
         decimal_calc.setText(convertToDecimal(userInput));
         binary_calc.setText(convertToBinary(userInput));
-        hex_calc.setText(convertToHex(userInput.toUpperCase()));
+        hex_calc.setText(convertToHex(userInput).toUpperCase());
         octal_calc.setText(convertToOctal(userInput));
 
         getWindow().setSoftInputMode(
