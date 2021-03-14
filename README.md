@@ -11,4 +11,4 @@ Currently adding a base converter
 - Plan to add more operations for it in the future, such as exponents, factorials, brackets, and a section dedicated to binary operations using 1's and 2's complement
 
 # Pictures of App
- ![Sample](app/src/main/res/drawable-v24/calculator1.png)
+ ![Calculator](app/src/main/res/drawable-v24/calculator1.png)  ![Base Converter](app/src/main/res/drawable-v24/calculator2.png)
